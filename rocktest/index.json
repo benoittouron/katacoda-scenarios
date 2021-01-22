@@ -28,7 +28,7 @@
     ],
     "assets": {
         "host01": [
-            {"file": "display.yaml", "target": "/tmp", "chmod": "+r"}
+            {"file": "display.yaml", "target": "/root/scen", "chmod": "+r"}
         ]
     },
     "intro": {
