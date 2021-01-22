@@ -4,8 +4,6 @@ First, have a look at the very simple scenario :
 
 `scen/display.yaml`{{open}}.
 
-Here is a basic Hello Rocktest scenario katacoda-scenarios/rocktest/assets/display.yaml{{open}}.
-
 Go to the `scen` directory, where the sample scenario is located.
 
 `cd scen`{{execute}}

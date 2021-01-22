@@ -12,7 +12,7 @@
     ],
     "assets": {
         "host01": [
-            {"file": "display.yaml", "target": "/root/scen", "chmod": "+r"}
+            {"file": "*", "target": "/root/scen", "chmod": "+r"}
         ]
     },
     "intro": {
@@ -23,9 +23,11 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/scen",
+    "hideHiddenFiles": true
   },
   "backend": {
-    "imageid": "adoptopenjdk:11"
+    "imageid": "openjdk:15"
   }
 }
