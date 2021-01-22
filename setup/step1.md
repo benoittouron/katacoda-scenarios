@@ -8,5 +8,5 @@ Go to the source directory, and compile Rock Test
 
 `cd rocktest`{{execute}}
 
-`mvn package`{{execute}}
+`mvn package -DskipTests`{{execute}}
 

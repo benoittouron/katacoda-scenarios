@@ -14,7 +14,7 @@ Have a look at the very simple scenario :
 
 Go to the scen directory
 
-`cd ~/scen`
+`cd ~/scen`{{execute}}
 
 Run the scenario
 
