@@ -1,6 +1,6 @@
 {
-  "title": "Hello Docker",
-  "description": "Hello World with Docker",
+  "title": "Setup Rocktest",
+  "description": "Setup RockTest and start a simple scenario",
   "difficulty": "Beginner",
   "time": "5 minutes",
   "details": {
@@ -26,6 +26,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "ubuntu:1804"
+    "imageid": "adoptopenjdk:11"
   }
 }

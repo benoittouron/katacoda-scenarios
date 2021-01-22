@@ -1,0 +1,1 @@
+In this scenario, we will learn how to launch setup Rock Test, and run a simple scenario.
