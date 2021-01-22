@@ -2,12 +2,12 @@
 
 Get the Rock Test package from GitHub
 
-`git clone https://github.com/rockintest/rocktest.git` {{execute}}
+`git clone https://github.com/rockintest/rocktest.git`{{execute}}
 
 Go to the source directory, and compile Rock Test
 
 `cd rocktest \
-mvn package` {{execute}}
+mvn package`{{execute}}
 
 
 Have a look at the very simple scenario :
@@ -16,11 +16,11 @@ Have a look at the very simple scenario :
 
 The `sh` directory contains the rocktest script, allowing to run the scenarios :
 
-`ls sh` {{execute}}
+`ls sh`{{execute}}
 
 Use the script to run the scenario
 
-`sh/rocktest /root/scen/display.yaml`
+`sh/rocktest /root/scen/display.yaml`{{execute}}
 
 Verify in the output of your test, you should get the following :
 
