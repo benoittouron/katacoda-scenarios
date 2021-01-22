@@ -1,8 +1,8 @@
 {
-  "title": "Rocktest",
-  "description": "Play with Rocktest",
+  "title": "Hello Docker",
+  "description": "Hello World with Docker",
   "difficulty": "Beginner",
-  "time": "10 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {
