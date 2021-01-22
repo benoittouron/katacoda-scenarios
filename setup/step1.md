@@ -2,28 +2,25 @@
 
 Get the Rock Test package from GitHub
 
-`git clone `{{execute}}
+`git clone https://github.com/rockintest/rocktest.git` {{execute}}
+
+Go to the source directory, and compile Rock Test
+
+`cd rocktest \
+mvn package` {{execute}}
 
 
-
-
-First, have a look at the very simple scenario :
+Have a look at the very simple scenario :
 
 `scen/display.yaml`{{open}}.
 
-Here is a basic Hello Rocktest scenario katacoda-scenarios/rocktest/assets/display.yaml{{open}}.
+The `sh` directory contains the rocktest script, allowing to run the scenarios :
 
+`ls sh` {{execute}}
 
+Use the script to run the scenario
 
-
-
-Go to the `scen` directory, where the sample scenario is located.
-
-`cd scen`{{execute}}
-
-Run the scenario, using the Docker image :
-
-`docker run -it --rm -v $PWD:/scen benoittouron/rocktest display.yaml`{{execute}}
+`sh/rocktest /root/scen/display.yaml`
 
 Verify in the output of your test, you should get the following :
 
@@ -38,5 +35,3 @@ Verify in the output of your test, you should get the following :
 ========================================
 22/01/2021 17:24:21.256 [INFO ] -  Scenario SUCCESS
 ````
-
-
