@@ -2,7 +2,7 @@
 
 First, have a look at the very simple scenario :
 
-`scen/display.yaml`{{open}}.
+`display.yaml`{{open}}.
 
 Go to the `scen` directory, where the sample scenario is located.
 

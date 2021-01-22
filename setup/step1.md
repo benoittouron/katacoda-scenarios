@@ -6,13 +6,14 @@ Get the Rock Test package from GitHub
 
 Go to the source directory, and compile Rock Test
 
-`cd rocktest \
-mvn package`{{execute}}
+`cd rocktest`{{execute}}
+
+`mvn package`{{execute}}
 
 
 Have a look at the very simple scenario :
 
-`scen/display.yaml`{{open}}.
+`display.yaml`{{open}}.
 
 The `sh` directory contains the rocktest script, allowing to run the scenarios :
 
