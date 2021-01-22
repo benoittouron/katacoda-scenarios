@@ -8,7 +8,7 @@ Go to the `scen` directory, where the sample scenario is located.
 
 Run the scenario, using the Docker image :
 
-`docker run -it --rm -v $PWD:/scen benoittouron/rocktest scenario.yaml`{{execute}}
+`docker run -it --rm -v $PWD:/scen benoittouron/rocktest display.yaml`{{execute}}
 
 Verify in the output of your test, you should get the following :
 
