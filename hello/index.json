@@ -1,8 +1,8 @@
 {
-  "title": "Setup Rocktest",
-  "description": "Setup RockTest and start a simple scenario",
+  "title": "Build Rocktest",
+  "description": "Install RockTest from binary and start a simple scenario",
   "difficulty": "Beginner",
-  "time": "5 minutes",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
@@ -14,11 +14,6 @@
         "text": "step2.md"
       }
     ],
-    "assets": {
-        "host01": [
-            {"file": "*", "target": "/root/scen", "chmod": "+r"}
-        ]
-    },
     "intro": {
       "text": "intro.md"
     },
@@ -28,7 +23,7 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uieditorpath": "/root/scen",
+    "uieditorpath": "/root",
     "hideHiddenFiles": true
   },
   "backend": {
