@@ -1,27 +1,14 @@
 ## Task
 
-Have a look at the very simple scenario :
+Have a look at the mock scenario :
 
-`rocktest/example/core/display.yaml`{{open}}.
+`scen/html-mock.yaml`{{open}}.
 
-Go to the directory containing the sample scenarios
+Run the mock
 
-`cd rocktest/example/core`{{execute}}
+`rocktest html-mock.yaml`{{execute}}
 
-Run the scenario
+The mock is listening on port 8080. You can use connect to it :
 
-`rocktest display.yaml`{{execute}}
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
-Verify in the output of your test, you should get the following :
-
-````
-...
-----------------------------------------
-22/01/2021 17:24:21.245 [INFO ] - [display] Step#1 display,Hello Rocktest !
-22/01/2021 17:24:21.254 [INFO ] - [display] Step#1 Hello Rocktest !
-----------------------------------------
-========================================
-=     Scenario Success ! It Rocks      =
-========================================
-22/01/2021 17:24:21.256 [INFO ] -  Scenario SUCCESS
-````
