@@ -1,17 +1,13 @@
 ## Task
 
-Get the Rock Test package from GitHub
+Setup RockTest
 
-`curl -L https://github.com/rockintest/rocktest/releases/download/v1.0.2/rocktest-1.0.2-bin.tar.gz --output rocktest.tgz`{{execute}}
+`setup.sh`{{execute}}
 
-Extract the archive
+Go to the scenario directory
 
-`mkdir rocktest; tar xzvf rocktest.tgz -C rocktest --strip-components=1`{{execute}}
+`cd scen`
 
-Setup your profile
+Check by running a simple script
 
-`rocktest/sh/rocksetup; `{{execute}}
-
-Update your environment (will be automatic at next login)
-
-`. ~/.bashrc`{{execute}}
+`rocktest display.yaml`

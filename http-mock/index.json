@@ -16,7 +16,7 @@
     ],
     "assets": {
       "host01": [
-        {"file": "scen/*", "target": "/root/scen", "chmod": "+r"},
+        {"file": "scen/*", "target": "/root", "chmod": "+r"},
         {"file": "setup.sh", "target": "/root", "chmod": "+x"}
       ]
     },
