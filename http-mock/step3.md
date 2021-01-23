@@ -15,3 +15,11 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/singer
 Or you can use curl
 
 `curl -s http://localhost/singer/springsteen | jq`{{execute T2}}
+
+Try with another URI
+
+`curl -s http://localhost/singer/acdc | jq`{{execute T2}}
+
+Try with another method
+
+`curl -sX POST http://localhost/singer/springsteen | jq`{{execute T2}}
