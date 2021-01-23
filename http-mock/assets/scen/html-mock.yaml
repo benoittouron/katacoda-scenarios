@@ -1,6 +1,6 @@
 - step: http.mock
   params:
-    port: 8080
+    port: 80
     # Default header. Always set.
     headers:
       content-type: text/html

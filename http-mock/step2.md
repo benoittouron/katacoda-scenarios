@@ -8,7 +8,6 @@ Run the mock
 
 `rocktest html-mock.yaml`{{execute}}
 
-The mock is listening on port 8080. You can use connect to it :
+The mock is listening on port 80. You can use connect to it :
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
-
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
