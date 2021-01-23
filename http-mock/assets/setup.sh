@@ -4,4 +4,4 @@ curl -L https://github.com/rockintest/rocktest/releases/download/v1.0.2/rocktest
 mkdir rocktest
 tar xzvf rocktest.tgz -C rocktest --strip-components=1
 rocktest/sh/rocksetup
-. ~/.bashrc
+
