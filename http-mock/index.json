@@ -1,8 +1,8 @@
 {
-  "title": "Hello Rocktest",
-  "description": "Install RockTest from binary and start a simple scenario",
-  "difficulty": "Beginner",
-  "time": "5 minutes",
+  "title": "HTTP mocks",
+  "description": "Create HTTP mocks with RockTest",
+  "difficulty": "Advanced",
+  "time": "15 minutes",
   "details": {
     "steps": [
       {
