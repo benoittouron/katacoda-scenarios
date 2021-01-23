@@ -1,0 +1,10 @@
+# Scenario with multiple steps
+
+- title: Scenario with 2 steps
+
+- display: Rock
+  desc: First display
+
+- display: n'roll
+  desc: Second display
+

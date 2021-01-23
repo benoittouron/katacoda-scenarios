@@ -1,3 +1,5 @@
 # You rock !
 
-In the next scenario, we will learn the Rock Test syntax.
+Let's go to the next scenario !
+
+Happy Rock'in !

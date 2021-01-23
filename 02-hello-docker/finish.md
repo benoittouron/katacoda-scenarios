@@ -1,2 +1,5 @@
 # You rock !
-Try the next scenario to run RockTest without Docker.
+
+Let's go to the next scenario, to have a look at RockTest syntax.
+
+Happy Rock'in !
