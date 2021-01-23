@@ -1,4 +1,4 @@
-## Task
+## Run the scenario
 
 Have a look at the very simple scenario :
 

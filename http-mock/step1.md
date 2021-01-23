@@ -1,4 +1,4 @@
-## Task
+## Installation
 
 Setup RockTest
 

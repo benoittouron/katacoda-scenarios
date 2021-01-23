@@ -1,4 +1,4 @@
-## Task
+## Run a scenario with the Docker image
 
 First, have a look at the very simple scenario :
 

@@ -1,4 +1,4 @@
-## Task
+## Install RockTest
 
 Get the Rock Test package from GitHub
 
