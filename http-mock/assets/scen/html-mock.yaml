@@ -1,4 +1,4 @@
-- step: http.mock
+- http.mock:
   params:
     port: 80
     # Default header. Always set.
@@ -16,4 +16,4 @@
               <img src="https://github.com/rockintest/rocktest/blob/main/rocktest.png?raw=true"/>
             </html>
 
-- step: pause forever
+- pause: forever

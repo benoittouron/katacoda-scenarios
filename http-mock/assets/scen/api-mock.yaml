@@ -1,4 +1,4 @@
-- step: http.mock
+- http.mock:
   params:
     port: 80
     # Default header. Always set.
@@ -15,5 +15,14 @@
               "fullname": "Bruce Springsteen aka The Boss",
               "bestsong": "Born in the USA"
             }
+      # Default answer
+      - uri: .*
+        method: .*
+        response:
+          code: 404
+          body: >-
+            {
+              "error": "Unknown URL or method"
+            }
 
-- step: pause forever
+- pause: forever
