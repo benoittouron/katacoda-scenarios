@@ -1,5 +1,5 @@
 {
-  "title": "Hello Rocktest",
+  "title": "Hello Rocktest with Docker",
   "description": "Hello World with RockTest in Docker",
   "difficulty": "Beginner",
   "time": "5 minutes",

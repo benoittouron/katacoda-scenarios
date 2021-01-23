@@ -1,8 +1,8 @@
 {
-  "title": "Build Rocktest",
+  "title": "Hello Rocktest",
   "description": "Install RockTest from binary and start a simple scenario",
   "difficulty": "Beginner",
-  "time": "10 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {

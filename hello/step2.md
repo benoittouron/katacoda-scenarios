@@ -4,9 +4,13 @@ Have a look at the very simple scenario :
 
 `rocktest/example/core/display.yaml`{{open}}.
 
+Go to the directory containing the sample scenarios
+
+`cd rocktest/example/core`{{execute}}
+
 Run the scenario
 
-`rocktest rocktest/example/core/display.yaml`{{execute}}
+`rocktest display.yaml`{{execute}}
 
 Verify in the output of your test, you should get the following :
 

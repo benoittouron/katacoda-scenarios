@@ -14,4 +14,4 @@ Setup your profile
 
 Update your environment (will be automatic at next login)
 
-`~/.bashrc`{{execute}}
+`. ~/.bashrc`{{execute}}
