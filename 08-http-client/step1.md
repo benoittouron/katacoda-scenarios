@@ -22,8 +22,8 @@ Run an HTTP mock we will use in the next steps :
 
 Verify that the mock is responding correctly :
 
-`curl -s http://localhost/singer/springsteen | jq`{{execute T2}}
+`curl -s http://localhost:8080/singer/springsteen | jq`{{execute T2}}
 
 Check the error simulation :
 
-`curl -i http://localhost/error/500/Internal_error`{{execute T2}}
+`curl -i http://localhost:8080/error/500/Internal_error`{{execute T2}}
