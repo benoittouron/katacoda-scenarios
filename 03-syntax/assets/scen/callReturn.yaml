@@ -1,0 +1,8 @@
+- call: moduleReturn
+  params:
+    singer: Mark Knopfler
+    band: Dire Straits
+
+- display: ${moduleReturn.returnValue}
+
+- display: ${moduleReturn.otherValue}

@@ -1,0 +1,14 @@
+- title: Example with function
+
+- call: ->rock
+  params:
+    singer: Bruce Springsteen
+
+- display: ${rock.returnValue}
+
+# Define function
+- function: rock
+  steps:
+    - display: ${singer}
+    - display: rocks !
+    - return: returnValue = I love ${singer}

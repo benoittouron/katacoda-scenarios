@@ -1,0 +1,5 @@
+- display: ${singer}, belonging to ${band} rocks !!
+
+- return: returnValue = ${singer} belongs to ${band}
+
+- return: otherValue = I love ${band}
