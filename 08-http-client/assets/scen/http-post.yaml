@@ -1,3 +1,10 @@
+# Verify that the entry does not exist
+- step: http.get
+  params:
+    url: http://localhost:8080/singer/inxs
+    expect:
+      code: 404
+
 # Put data to the Mock
 - step: http.post
   params:
