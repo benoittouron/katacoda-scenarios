@@ -1,25 +1,21 @@
-## API Mock
+## Assign a logic to a condition
 
-Have a look at the mock scenario :
+When a condition is met (URI and method match), you can can a function,
+thus assign a logic.
 
-`scen/api-mock.yaml`{{open}}.
+Here is the scenario :
+
+`scen/uricall.yaml`{{open}}.
+
+Just add a `call` parameter to the mock condition, give the function to
+call using `name` and the parameters with a `params` map.
 
 Run the mock
 
-`rocktest api-mock.yaml`{{execute interrupt}}
+`rocktest uricall.yaml`{{execute interrupt T1}}
 
-The mock is listening on port 80. You can use connect to it :
-
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/singer/springsteen
-
-Or you can use curl
+Test with curl
 
 `curl -s http://localhost/singer/springsteen | jq`{{execute T2}}
 
-Try with another URI
-
-`curl -s http://localhost/singer/acdc | jq`{{execute T2}}
-
-Try with another method
-
-`curl -sX POST http://localhost/singer/springsteen | jq`{{execute T2}}
+Verify in the logs of the mock, that the logic has been called.
