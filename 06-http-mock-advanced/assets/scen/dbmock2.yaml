@@ -4,7 +4,7 @@
 # Spin the mock
 - http.mock:
   params:
-    port: 8080
+    port: 80
     headers:
       content-type: application/json
     when:
@@ -53,30 +53,37 @@
 # Function : get
 - function: get
   steps:
-  - display: Look for ${singer}
+    - display: Look for ${singer}
 
-  - sql.request:
-    params:
-      request: select * from rock where id='${singer}'
+    - sql.request:
+      params:
+        request: select * from rock where id='${singer}'
 
-  - display: "Record found : ${request.0}"
+    - display: "Record found : ${request.0}"
 
-  - type: var
-    name: tmp
-    value: >-
-      {
-        "name" : "${request.1}",
-        "fullname" : "${request.2}",
-        "bestsong" : "${request.3}"
-      }
+    - type: var
+      name: tmp
+      value: >-
+        {
+          "name" : "${request.1}",
+          "fullname" : "${request.2}",
+          "bestsong" : "${request.3}"
+        }
 
-  - display: ${request.0}
+    - type: var
+      name: err
+      value: >-
+        {
+          "error" : "Singer ${singer} not found"
+        }
 
-    # If no line is found, return an error body
-  - return: body = ${request.0?${tmp}::{"error":"Singer ${singer} not found"}}
+    - display: ${request.0}
 
-    # If no line is found, return 404, else 200
-  - return: code = ${request.0?200::404}
+      # If no line is found, return an error body
+    - return: body = ${request.0?${tmp}::${err}}
+
+      # If no line is found, return 404, else 200
+    - return: code = ${request.0?200::404}
 
 
 # Function to initialize the database

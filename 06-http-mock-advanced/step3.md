@@ -51,13 +51,31 @@ Test it with curl :
 
 And if no entry is found :
 
-`curl -s http://localhost/singer/bob-marley | jq`{{execute T2}}
+`curl -is http://localhost/singer/bob-marley`{{execute T2}}
 
+As you can see, the status code is 404, as expected.
 
 #### Write to the database
 
 Now, we can use the same mechanism to create new objects in our mock,
 using a POST request.
 
+Here is the scenario :
 
+`scen/dbmock2.yaml`{{open}}.
 
+There is a `create` function, which is called on post on /singer URI.
+
+Fields are extracted from the body using the `json.parse` expression.
+
+Run the mock :
+
+`rocktest dbmock2.yaml`{{execute interrupt T1}}
+
+Put an entry using curl :
+
+`curl --header "Content-Type: application/json" -X POST --data '{ "name":"bono", "fullname":"Bono & U2","bestsong":"Where the strrts have no name"}' http://localhost:8080/singer`{{execute T2}}
+
+Read the object using a get method :
+
+`curl -s http://localhost/singer/bono | jq`{{execute T2}}
