@@ -74,7 +74,7 @@ Run the mock :
 
 Put an entry using curl :
 
-`curl --header "Content-Type: application/json" -X POST --data '{ "name":"bono", "fullname":"Bono & U2","bestsong":"Where the strrts have no name"}' http://localhost:8080/singer`{{execute T2}}
+`curl --header "Content-Type: application/json" -X POST --data '{ "name":"bono", "fullname":"Bono U2","bestsong":"Where the streets have no name"}' http://localhost/singer`{{execute T2}}
 
 Read the object using a get method :
 
