@@ -1,0 +1,54 @@
+# Multiple datasource, identified by the param "name".
+# If not specified, name = "default"
+
+- sql.connect:
+  params:
+    name : rock
+    retry: 0
+    url: "jdbc:h2:mem:rock"
+
+- sql.request:
+  params:
+    name : rock
+    request: >-
+      CREATE TABLE artist (
+         id VARCHAR(50) NOT NULL,
+         fullname VARCHAR(50) NOT NULL,
+         bestsong VARCHAR(50) NOT NULL
+      );
+      insert into artist (id,fullname,bestsong) values('springsteen','Bruce Springsteen aka The Boss','Land of hope and dreams');
+      insert into artist (id,fullname,bestsong) values('acdc','AC/DC','Thunderstruck');
+
+- sql.connect:
+  params:
+    name : country
+    retry: 0
+    url: "jdbc:h2:mem:country"
+
+- sql.request:
+  params:
+    name : country
+    request: >-
+      CREATE TABLE artist (
+         id VARCHAR(50) NOT NULL,
+         fullname VARCHAR(50) NOT NULL,
+         bestsong VARCHAR(50) NOT NULL
+      );
+      insert into artist (id,fullname,bestsong) values('harris','Emmylou Harris','Roses in the snow');
+      insert into artist (id,fullname,bestsong) values('stapleton','Chris Stapleton','Tennessee Whiskey');
+
+- sql.request:
+  params:
+    name: rock
+    request: select * from artist
+    expect:
+      - Land of hope and dreams
+      - Thunderstruck
+
+- sql.request:
+  params:
+    name: country
+    request: select * from artist
+    expect:
+      - Emmylou Harris
+      - Chris Stapleton

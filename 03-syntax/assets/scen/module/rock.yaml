@@ -1,0 +1,5 @@
+- call: module/roll
+
+- display: "roll says : ${roll.returnValue}"
+
+- return: returnValue = ${roll.returnValue}

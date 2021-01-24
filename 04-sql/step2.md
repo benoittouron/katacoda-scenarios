@@ -26,7 +26,7 @@ Execute the scenario :
 When the request is a SELECT, the last line is put in variables.
 - ${request.0} : the last line returned
 - ${request._n_} : the _n_<sup>th</sup> field
-- ${request.<FIELDNAME>} : the corresponding column in the table
+- ${request.\<FIELDNAME\>} : the corresponding column in the table
 
 Example :
 

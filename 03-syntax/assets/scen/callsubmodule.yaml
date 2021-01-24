@@ -1,0 +1,4 @@
+- call: module/rock
+
+- display: "Rock says: ${rock.returnValue}"
+

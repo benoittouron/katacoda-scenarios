@@ -1,0 +1,15 @@
+- call: rock
+- display: "Roll function says : ${rock.returnValue}"
+
+# Define first function
+- function: rock
+  steps:
+    - display: Rock
+    - call: roll
+    - return: returnValue = ${roll.returnValue}
+
+# Define sub-function
+- function: roll
+  steps:
+    - display: n'roll
+    - return: returnValue = From roll

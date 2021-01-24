@@ -34,9 +34,7 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uieditorpath": "/root",
-    "hideHiddenFiles": true,
-    "showdashboard": true,
-    "dashboards": [{"name": "HTML Mock", "port": 80}]
+    "hideHiddenFiles": true
   },
   "backend": {
     "imageid": "openjdk:15"
