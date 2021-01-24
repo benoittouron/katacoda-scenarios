@@ -1,8 +1,6 @@
-## Extract path variable
+## HTTP requests
 
-You can extract data from the URI path and use it in your body. 
-
-Have a look at the mock scenario :
+You can do HTTP requests with RockTest. 
 
 `scen/pathvariable.yaml`{{open}}.
 

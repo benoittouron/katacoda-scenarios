@@ -1,0 +1,7 @@
+- http.get:
+  desc: HTTP Get request
+  params:
+    url: http://localhost:8080/singer/springsteen
+
+- display: Return code = ${get.code}
+- display: Return body = ${get.body}

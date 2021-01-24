@@ -1,0 +1,10 @@
+
+# Variable is not set. Expression returns the default value
+- display: "\"rocker\" variable is ${rocker::not set}"
+
+- var: rocker = Bono
+
+# Now, the variable is set. The expression returns the content of the variable
+- display: "\"rocker\" variable is ${rocker::not set}"
+
+

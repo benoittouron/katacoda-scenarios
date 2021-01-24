@@ -4,7 +4,7 @@
 # Spin the mock
 - http.mock:
   params:
-    port: 80
+    port: 8080
     headers:
       content-type: application/json
     when:
@@ -26,6 +26,15 @@
             body: ${body}
         response:
           code: ${create.code}
+
+      - uri: /error/([^/]*)/([^/]*).*
+        method: .*
+        response:
+          code: ${1}
+          body: >-
+            {
+              "error": "${2}"
+            }
 
 - pause: forever
 

@@ -1,0 +1,13 @@
+# Define a simple variable
+- var: instrument = guitar
+
+# Define a JSON variable
+- var: |
+    body = {
+      "singer": "Mark Knopfler",
+      "band": "Dire Straits"
+      "instrument": "${instrument}"
+    }
+
+- display: instrument = ${instrument}
+- display: Body = ${body}
