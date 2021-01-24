@@ -9,7 +9,7 @@ Here is an example :
 
 Run scenario
 
-`rocktest sunfunction.yaml`{{execute}}
+`rocktest subfunction.yaml`{{execute}}
 
 
 ## Sub modules
