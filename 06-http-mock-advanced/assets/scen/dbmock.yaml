@@ -1,0 +1,71 @@
+# First, connects ao the database, and load data
+- call: initdb
+
+# Spin the mock
+- http.mock:
+  params:
+    port: 80
+    headers:
+      content-type: application/json
+    when:
+      - uri: /singer/([^/]*).*
+        method: get
+        call:
+          value: -> get
+          params:
+            singer: ${1}
+        response:
+          code: ${get.code}
+          body: ${get.body}
+
+- pause: forever
+
+
+
+# Function : get
+- function: get
+  steps:
+  - display: Look for ${singer}
+
+  - sql.request:
+    params:
+      request: select * from rock where id='${singer}'
+
+  - display: "Record found : ${request.0}"
+
+  - type: var
+    name: tmp
+    value: >-
+      {
+        "name" : "${request.1}",
+        "fullname" : "${request.2}",
+        "bestsong" : "${request.3}"
+      }
+
+  - display: ${request.0}
+
+    # If no line is found, return an error body
+  - return: body = ${request.0?${tmp}::{"error":"Singer ${singer} not found"}}
+
+    # If no line is found, return 404, else 200
+  - return: code = ${request.0?200::404}
+
+
+# Function to initialize the database
+
+- function: initdb
+  steps:
+  - sql.connect:
+    params:
+      url: "jdbc:h2:mem:"
+
+  - sql.request:
+    params:
+      request: >-
+        CREATE TABLE rock (
+           id VARCHAR(50) NOT NULL,
+           fullname VARCHAR(50) NOT NULL,
+           bestsong VARCHAR(50) NOT NULL
+        );
+        insert into rock (id,fullname,bestsong) values('springsteen','Bruce Springsteen aka The Boss','Land of hope and dreams');
+        insert into rock (id,fullname,bestsong) values('acdc','AC/DC','Thunderstruck');
