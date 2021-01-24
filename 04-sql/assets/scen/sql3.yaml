@@ -1,0 +1,25 @@
+- sql.connect:
+  params:
+    retry: 0
+    url: "jdbc:h2:mem:"
+
+- sql.request:
+  params:
+    request: >-
+      CREATE TABLE rock (
+         id INT NOT NULL,
+         title VARCHAR(50) NOT NULL,
+         author VARCHAR(20) NOT NULL,
+         date DATE
+      );
+      insert into rock (id,title,author,date) values(3,'Kick','INXS',parsedatetime('19900902','yyyyMMdd'));
+
+- sql.request:
+  params:
+    request: select ID from rock where TITLE='Kick'
+
+- sql.request:
+  params:
+    request: select * from rock where ID=${request.ID}
+
+- display: Author with ID ${request.ID} is ${request.AUTHOR}

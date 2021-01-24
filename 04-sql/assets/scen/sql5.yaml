@@ -1,0 +1,24 @@
+- sql.connect:
+  params:
+    url: "jdbc:h2:mem:"
+
+- sql.request:
+  params:
+    request: >-
+      CREATE TABLE rock (
+         id INT NOT NULL,
+         title VARCHAR(50) NOT NULL,
+         author VARCHAR(20) NOT NULL,
+         date DATE
+      );
+      insert into rock (id,title,author,date) values(3,'Original sin','INXS',parsedatetime('19900902','yyyyMMdd'));
+      insert into rock (id,title,author,date) values(1,'Born in the USA','Bruce Springsteen',parsedatetime('19840604','yyyyMMdd'));
+
+- step: sql.request
+  params:
+    request: select * from rock
+    expect:
+      # Expect matches
+      - Born in the .*
+      # Expect does not match
+      - Land of hope and dreams

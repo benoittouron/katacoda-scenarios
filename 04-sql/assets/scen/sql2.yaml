@@ -1,0 +1,25 @@
+- sql.connect:
+  params:
+    retry: 0
+    url: "jdbc:h2:mem:"
+
+- sql.request:
+  params:
+    request: >-
+      CREATE TABLE rock (
+         id INT NOT NULL,
+         title VARCHAR(50) NOT NULL,
+         author VARCHAR(20) NOT NULL,
+         date DATE
+      );
+      insert into rock (id,title,author,date) values(3,'Devil inside','INXS',parsedatetime('19900902','yyyyMMdd'));
+
+- sql.request:
+  params:
+    request: select * from rock
+
+- display: ${request.3} rocks !!
+
+- display: "Full record: ${request.0}"
+
+- display: '"${request.TITLE}" is the best song ever.'
