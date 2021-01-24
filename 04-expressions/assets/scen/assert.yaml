@@ -1,0 +1,35 @@
+- assert.equals:
+  params:
+    expected: abc
+    actual: abc
+    message: I should not be raised
+
+- var: myvar = myvalue
+
+- assert.equals:
+  params:
+    expected: myvalue
+    actual: ${myvar}
+    message: I should not be raised
+
+- assert.equals:
+  params:
+    expected: ${myvar}
+    actual: myvalue
+    message: I should not be raised
+
+
+- step: var
+  name: json
+  value: >-
+    {
+      "name" : "inxs",
+      "album" : "Kick"
+    }
+
+# Example with an expression
+- assert.equals:
+  params:
+    expected: Kick
+    actual: ${$json.parse(${json}).album}
+    message: I should not be raised

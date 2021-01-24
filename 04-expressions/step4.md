@@ -1,30 +1,57 @@
-## Fonctions
+## Assertions
 
-Modules can be embedded in a scenario, in this case, we call it `functions`.
+It is possible to verify the content of an expression, using assertions.
 
-Use a `function` step to define a function.
+#### Check equality
 
-Here is an example :
+Use `assert.equals` step.
 
-`scen/function.yaml`{{open}}.
+Example :
 
-Run scenario
+`scen/assert.yaml`{{open}}
 
-`rocktest function.yaml`{{execute}}
+Run the scenario :
 
-You can see the stack in the logs ( [function/rock] )
+`rocktest assert.yaml`{{execute}}
 
-Functions can be located in another scenario. It is then possible to build Rock Libraries.
+If the assertion fails, an error is raised.
 
-##### Example of a library, with 2 functions :
+Example :
 
-`scen/lib.yaml`{{open}}.
+`scen/assert-fail1.yaml`{{open}}
 
-To call a function located in another module use the syntax `module->function`. 
-See the example :
+Run the scenario :
 
-`scen/calllib.yaml`{{open}}.
+`rocktest assert-fail1.yaml`{{execute}}
 
-`rocktest calllib.yaml`{{execute}}
+#### Check regex match
 
-Verify in the output, the stack is [ scenario/module.function ]
+Use `assert.match` step. The `expected` param is a regex.
+
+Example :
+
+`scen/assert-regex.yaml`{{open}}
+
+Run the scenario :
+
+`rocktest assert-regex.yaml`{{execute}}
+
+#### JSON check
+
+To make scenarios more readable and less verbose, use a `json.check` step.
+
+Use the `equals` param to verify the exact equality of a JSON element, identified by its JSON Path.
+
+Use the `match` param to verify the matching of JSON element, identified by its JSON Path,
+against a regex.
+
+Example :
+
+`scen/jsoncheck.yaml`{{open}}
+
+Run the scenario :
+
+`rocktest jsoncheck.yaml`{{execute}}
+
+
+

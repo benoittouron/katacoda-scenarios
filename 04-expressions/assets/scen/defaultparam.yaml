@@ -1,0 +1,14 @@
+# Call with no parameter => default value will be used.
+- call: rock
+
+# Call with parameter => param value will be used.
+- call: rock
+  params:
+    param: Experts Rock !
+
+# Define function
+- function: rock
+  steps:
+    # Use expression to provide default value of param
+    - var: message = ${param::You Rock}
+    - display: ${message}

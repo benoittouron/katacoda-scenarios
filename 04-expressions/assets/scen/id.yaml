@@ -1,0 +1,31 @@
+# Start at 0 by default
+- display: ${$id.seq()}
+- display: ${$id.seq()}
+
+# Reset default sequence
+- id.initseq:
+  params:
+    value: 1000
+    step: 2
+
+# 1000
+- display: ${$id.seq()}
+# 1002
+- display: ${$id.seq()}
+
+# Create another sequence
+- id.initseq:
+  params:
+    value: 100
+    step: 10
+    name: rock
+
+# 100
+- display: ${$id.seq(rock)}
+# 110
+- display: ${$id.seq(rock)}
+
+
+# Get UUID
+- display: ${$id.uuid()}
+- display: ${$id.uuid()}

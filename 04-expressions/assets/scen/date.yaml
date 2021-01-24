@@ -1,0 +1,8 @@
+# Get the date in french format
+- display: ${$date.now()}
+
+# Change the format
+- display: ${$date.now(yyyyMMdd)}
+
+- display: ${$date.now(hh:mm:ss)}
+

@@ -1,0 +1,26 @@
+- var: |
+    jsonarray = {
+      "albums" : [
+        {
+          "name" : "inxs",
+          "album" : "Kick"
+        },
+        {
+          "name" : "Pink Floyd",
+          "album" : "The dark side of the moon"
+        }
+      ]
+    }
+
+- json.check:
+  params:
+    json: ${jsonarray}
+    # Do assert.equals on JSON fields
+    equals:
+      albums[1].name : Pink Floyd
+      albums[0].album : Kick
+    # Do assert.match on JSON field
+    match:
+      albums[1].name : Pink.*d
+      # Substrings match
+      albums[0].album : ic

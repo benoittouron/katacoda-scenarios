@@ -1,0 +1,14 @@
+- var: name = rocker
+- var: rocker = Bruce
+
+# Indirection : the name of a variable can itself be a variable
+- display: ${name} variable contains ${${name}}
+
+# Variable is not set. Expression returns the value if not set
+- display: ${jazzman?jazzman is set and its value is ${jazmann}::jazzman is not set}"
+
+- var: jazzman = Duke
+
+# Now, the variable is set. The expression returns the value if set
+- display: ${jazzman?jazzman is set and its value is ${jazzman}::jazzman is not set}"
+

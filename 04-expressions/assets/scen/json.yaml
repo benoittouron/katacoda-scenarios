@@ -1,0 +1,26 @@
+- step: var
+  name: json
+  value: >-
+    {
+      "name" : "inxs",
+      "album" : "Kick"
+    }
+
+- step: var
+  name: jsonarray
+  value: >-
+    {
+      "albums" : [
+        {
+          "name" : "inxs",
+          "album" : "Kick"
+        },
+        {
+          "name" : "Pink Floyd",
+          "album" : "The dark side of the moon"
+        }
+      ]
+    }
+
+# Should display "Kick"
+- display: ${$json.parse(${json}).album}
