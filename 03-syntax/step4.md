@@ -16,7 +16,7 @@ You can see the stack in the logs ( [function/rock] )
 
 Functions can be located in another scenario. It is then possible to build Rock Libraries.
 
-###Example of a library, with 2 functions :
+##### Example of a library, with 2 functions :
 
 `scen/lib.yaml`{{open}}.
 

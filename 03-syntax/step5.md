@@ -1,6 +1,6 @@
 ## Parameters
 
-### For functions
+##### For functions
 
 Modules and function accept parameters. To pass parameters, add a
 `param` entry to the `call` step.
@@ -13,7 +13,7 @@ Run scenario
 
 `rocktest functionParam.yaml`{{execute}}
 
-### For modules
+##### For modules
 
 It is the same for modules :
 
