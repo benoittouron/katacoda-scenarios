@@ -1,0 +1,13 @@
+- title: Example with function
+
+- call: ->rock
+  desc: Call function
+
+# Define function
+- function: rock
+  steps:
+    - display: This function...
+      desc: First display in function
+
+    - display: rocks !
+      desc: Second display in function

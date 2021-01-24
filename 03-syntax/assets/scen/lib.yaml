@@ -1,0 +1,17 @@
+# Define first function
+- function: rock
+  steps:
+    - display: This function...
+      desc: First display in rock function
+
+    - display: rocks !
+      desc: Second display in rock function
+
+# Define second function
+- function: roll
+  steps:
+    - display: This function...
+      desc: First display in roll function
+
+    - display: rolls !
+      desc: Second display in roll function

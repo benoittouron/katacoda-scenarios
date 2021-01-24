@@ -1,4 +1,4 @@
-## Modules and fonctions
+## Rock Modules
 
 You can call another scenario from a scenario. That's what we call a RockModule.
 

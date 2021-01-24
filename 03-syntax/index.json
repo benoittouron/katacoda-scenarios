@@ -1,7 +1,7 @@
 {
-  "title": "HTTP mocks",
-  "description": "Create HTTP mocks with RockTest",
-  "difficulty": "Advanced",
+  "title": "RockTest syntax",
+  "description": "Basic RockTest syntax",
+  "difficulty": "Intermediate",
   "time": "15 minutes",
   "details": {
     "steps": [
@@ -16,6 +16,10 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
     "assets": {
