@@ -1,0 +1,4 @@
+- call: moduleParam
+  params:
+    singer: Mark Knopfler
+    band: Dire Straits

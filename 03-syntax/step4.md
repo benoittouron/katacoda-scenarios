@@ -16,7 +16,7 @@ You can see the stack in the logs ( [function/rock] )
 
 Functions can be located in another scenario. It is then possible to build Rock Libraries.
 
-Example of a library, with 2 functions :
+###Example of a library, with 2 functions :
 
 `scen/lib.yaml`{{open}}.
 
@@ -24,5 +24,7 @@ To call a function located in another module use the syntax `module->function`.
 See the example :
 
 `scen/calllib.yaml`{{open}}.
+
+`rocktest calllib.yaml`{{execute}}
 
 Verify in the output, the stack is [ scenario/module.function ]

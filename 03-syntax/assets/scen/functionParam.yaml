@@ -1,0 +1,11 @@
+- title: Example with function
+
+- call: ->rock
+  params:
+    singer: Bruce Springsteen
+
+# Define function
+- function: rock
+  steps:
+    - display: ${singer}
+    - display: rocks !
