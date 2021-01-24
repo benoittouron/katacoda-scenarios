@@ -72,6 +72,10 @@ Run the mock :
 
 `rocktest dbmock2.yaml`{{execute interrupt T1}}
 
+Verify that the `bono` entry is not present :
+
+`curl -s http://localhost/singer/bono | jq`{{execute T2}}
+
 Put an entry using curl :
 
 `curl -i --header "Content-Type: application/json" -X POST --data '{ "name":"bono", "fullname":"Bono U2","bestsong":"Where the streets have no name"}' http://localhost/singer`{{execute T2}}
