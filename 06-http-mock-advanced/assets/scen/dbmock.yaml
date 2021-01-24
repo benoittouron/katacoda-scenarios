@@ -42,10 +42,17 @@
         "bestsong" : "${request.3}"
       }
 
+  - type: var
+    name: err
+    value: >-
+      {
+        "error" : "Singer ${singer} not found"
+      }
+
   - display: ${request.0}
 
     # If no line is found, return an error body
-  - return: body = ${request.0?${tmp}::{"error":"Singer ${singer} not found"}}
+  - return: body = ${request.0?${tmp}::${err}}
 
     # If no line is found, return 404, else 200
   - return: code = ${request.0?200::404}
