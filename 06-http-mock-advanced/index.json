@@ -1,6 +1,6 @@
 {
-  "title": "HTTP mocks",
-  "description": "Create HTTP mocks with RockTest",
+  "title": "Advanced HTTP mocks",
+  "description": "Create advanced HTTP mocks with RockTest, with persistence in an embedded database.",
   "difficulty": "Advanced",
   "time": "15 minutes",
   "details": {
