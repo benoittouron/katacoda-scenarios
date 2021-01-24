@@ -1,0 +1,10 @@
+- step: http.get
+  desc: Check return code and body
+  params:
+    url: http://localhost:8080/singer/springsteen
+    expect:
+      # Code
+      code: 200
+      # Body as JSON. Keys are JSON paths
+      body.json:
+        fullname : Axl Rose

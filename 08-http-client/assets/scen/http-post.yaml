@@ -1,0 +1,20 @@
+# Put data to the Mock
+- step: http.post
+  params:
+    url: http://localhost:8080/singer
+    body: >-
+      {
+          "bestsong": "Suicide Blonde",
+          "name": "inxs",
+          "fullname": "INXS"
+      }
+    expect:
+      - code=201
+
+- step: http.get
+  params:
+    url: http://localhost:8080/singer/inxs
+    expect:
+      code: 200
+      body.json:
+        bestsong: Suicide Blonde

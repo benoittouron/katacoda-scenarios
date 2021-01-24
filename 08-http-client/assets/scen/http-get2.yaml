@@ -1,0 +1,16 @@
+- step: http.get
+  desc: Check return code and body
+  params:
+    url: http://localhost:8080/singer/springsteen
+    expect:
+      # Code
+      code: 200
+      # Body as JSON. Keys are JSON paths
+      body.json:
+        bestsong: Land of h..e and dre..s
+        "['fullname']" : Springsteen
+      # Raw check, using regex. \n represents a line return,
+      # and is considered as a regular character
+      body.matches:
+        - Springsteen
+        - "\n  \"bestsong\" : \"Land of hope and dreams\"\n"
