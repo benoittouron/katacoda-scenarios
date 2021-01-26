@@ -24,3 +24,6 @@
 
 # Should display "Kick"
 - display: ${$json.parse(${json}).album}
+
+# Array parsing : displays "The dark side of the moon"
+- display: ${$json.parse(${jsonarray}).albums[1].album}
