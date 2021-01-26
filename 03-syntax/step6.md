@@ -21,16 +21,16 @@ Run scenario
 
 It is the same for modules :
 
-Example of called module with 2 parameters :
+Example of called module with return values :
 
-`scen/moduleParam.yaml`{{open}}.
+`scen/moduleReturn.yaml`{{open}}.
 
 Example of calling scenario :
 
-`scen/callParam.yaml`{{open}}.
+`scen/callReturn.yaml`{{open}}.
 
 Run the scenario :
 
-`rocktest callParam.yaml`{{execute}}
+`rocktest callReturn.yaml`{{execute}}
 
 
