@@ -8,10 +8,10 @@ Main script
 `scen/call.yaml`{{open}}.
 
 Module called
-`scen/display.yaml`{{open}}.
+`scen/rock.yaml`{{open}}.
 
 Run scenario
 
 `rocktest call.yaml`{{execute}}
 
-You can see the stack in the logs ( [call/display] )
+You can see the stack in the logs ( [call/rock] )
