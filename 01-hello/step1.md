@@ -2,7 +2,7 @@
 
 Get the Rock Test package from GitHub
 
-`curl -L https://github.com/rockintest/rocktest/releases/download/v1.0.2/rocktest-1.0.2-bin.tar.gz --output rocktest.tgz`{{execute}}
+`curl -L https://github.com/rockintest/rocktest/releases/latest/download/rocktest-bin.tar.gz --output rocktest.tgz`{{execute}}
 
 Extract the archive
 
